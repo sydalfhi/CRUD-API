@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "syaid alfarishi",
+      "username": "syaid alfarishi",
+      "email": "syaidalfarishi@gmail.com",
+      "phone": "6283181435850",
+      "gendre": "male"
+    },
+    {
+      "id": 2,
+      "name": "syafina",
+      "username": "kanya rebecca",
+      "email": "baskara@gmail.com",
+      "phone": "6283181435850",
+      "gendre": "female"
+    }
+  ]
+}
