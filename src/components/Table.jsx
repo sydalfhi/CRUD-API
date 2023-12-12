@@ -1,8 +1,15 @@
 import Edit from "../assets/img/edit.svg";
 import Delete from "../assets/img/delete.svg";
 import { Link } from "react-router-dom";
+import { deleteData } from "../service/api.service";
 
 const Table = ({ data }) => {
+  const handleDelete = (even, id) => {
+    even.preventDefault();
+    deleteData(id);
+    window.location.reload();
+  };
+
   return (
     <section className="container px-4 mx-auto">
       <div className="flex flex-col mt-6">
@@ -66,7 +73,10 @@ const Table = ({ data }) => {
                               className="  w-[30px] h-auto p-1 bg-sky-500 rounded-[4px]"
                             />
                           </Link>
-                          <a href="">
+                          <a
+                            href=""
+                            onClick={(even) => handleDelete(even, item.id)}
+                          >
                             <img
                               src={Delete}
                               alt="delete"

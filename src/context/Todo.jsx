@@ -1,9 +1,10 @@
 import { create } from "zustand";
 
-const useTodoStore = create((set) => ({
+export const useTodoStore = create((set) => ({
   dataSementara: {},
-  setDataSementara: ({ id, name, username, phone, gendre }) => {
-    const newData = { id, name, username, phone, gendre };
+  setDataSementara: ({ id, name, email, username, phone, gendre }) => {
+    const newData = { id, name, username, email, phone, gendre };
     set({ dataSementara: newData });
   },
+  hapusDataSementara: () => set({ dataSementara: {} }),
 }));
